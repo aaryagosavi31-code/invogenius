@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNOVA | Smart Student Onboarding</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0B0F1A] text-white font-sans selection:bg-[#6C5CE7]">
+    
+    <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#6C5CE7] opacity-20 blur-[120px] rounded-full"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#4361EE] opacity-10 blur-[120px] rounded-full"></div>
+
+    <div class="relative flex min-h-screen">
+        <aside class="w-64 border-r border-white/10 bg-black/20 backdrop-blur-md p-6 hidden md:block">
+            <div class="flex items-center gap-3 mb-10">
+                <div class="w-10 h-10 bg-gradient-to-tr from-[#6C5CE7] to-[#3A0CA3] rounded-lg flex items-center justify-center font-bold text-xl shadow-lg shadow-purple-500/20">E</div>
+                <h1 class="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">EduNOVA</h1>
+            </div>
+            <nav class="space-y-4">
+                <a href="#" class="flex items-center gap-3 text-[#6C5CE7] bg-[#6C5CE7]/10 p-3 rounded-xl border border-[#6C5CE7]/20">
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link">Verification</a>
+                <a href="#" class="nav-link">Hostel Allocation</a>
+                <a href="#" class="nav-link">Course Reg</a>
+                <a href="#" class="nav-link">Fee Portal</a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 p-6 md:p-10 overflow-y-auto">
+            <header class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-10 gap-6">
+                <div>
+                    <h2 class="text-3xl font-bold">Welcome, Ashwin</h2>
+                    <p class="text-gray-400 mt-1">First Year Engineering Onboarding Lifecycle</p>
+                </div>
+
+                <div class="relative w-full max-w-md group">
+                    <div class="flex items-center bg-white/5 border border-white/10 rounded-2xl px-4 py-3 focus-within:border-[#6C5CE7] focus-within:ring-1 focus-within:ring-[#6C5CE7]/50 transition-all duration-300">
+                        <span class="text-gray-400 mr-3">🔍</span>
+                        <input 
+                            type="text" 
+                            id="hostel-search" 
+                            placeholder="Search hostels near campus..." 
+                            class="bg-transparent border-none outline-none text-sm w-full text-white placeholder:text-gray-500"
+                        >
+                    </div>
+                    
+                    <div id="search-results" class="absolute top-full left-0 right-0 mt-3 bg-[#121625] border border-white/10 rounded-2xl overflow-hidden hidden z-50 backdrop-blur-2xl shadow-2xl">
+                        </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="hidden sm:block text-right">
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-widest">Status</p>
+                        <p class="text-sm text-green-400">60% Complete</p>
+                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#6C5CE7] to-[#4361EE] p-[2px]">
+                        <div class="w-full h-full bg-[#0B0F1A] rounded-[14px] flex items-center justify-center">
+                            <span class="text-sm font-bold">HH</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="glass-card p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="p-2 bg-red-500/10 text-red-400 rounded-lg text-xs">Priority</span>
+                        <span class="text-gray-500 text-xs italic">2 Days Left</span>
+                    </div>
+                    <h3 class="text-gray-400 mb-1">Fee Payment</h3>
+                    <p class="text-xl font-semibold">Installment #1</p>
+                </div>
+                </section>
+        </main>
+
+        <div id="ai-chat-trigger" class="fixed bottom-8 right-8 w-16 h-16 bg-[#6C5CE7] rounded-2xl flex items-center justify-center cursor-pointer shadow-[0_0_30px_rgba(108,92,231,0.4)] hover:scale-105 transition-all z-50">
+            <span class="text-2xl animate-bounce">🤖</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
